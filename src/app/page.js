@@ -1,103 +1,99 @@
-import Image from "next/image";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-white text-black">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            Hi, my name is <span className="text-blue-600">Kirankumar</span>.
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600">
+            <span className="font-bold">Senior Frontend Developer @ Atlassian</span>
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container max-w-4xl mx-auto mx-auto">
+          <h2 className="text-4xl font-bold mb-8">About Me</h2>
+          <div className="prose prose-lg">
+            <p className="text-gray-600 mb-6">
+              Kirankumar is a technical leader with 8 years of experience
+              working on Frontend technologies. He is currently working at
+              Atlassian, leading a team of 4 FE Engineers, and owns Frontend
+              backlog. Kiran is also driving an accessibility initiative across
+              JSM, where he is leading a team of 5 FE Engineers and also driving
+              25+ teams in making JSM accessible.
+            </p>
+            <p className="text-gray-600">
+              Kiran is an active open-source contributor. He made contributions
+              to React, redux, Gatsby, Hasura, Material UI, GetStream, and
+              various other JS libraries. He also loves teaching. He delivered
+              10+ conference and meetup talks. &quot;Ask me about JS, React,
+              Accessibility and blockchain&quot. Reach out to learn JS Technologies.
+              I do Freelance occasionally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section id="courses" className="container mx-auto py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-16">Courses</h2>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-4 shadow-lg p-8">
+              <h3 className="text-2xl font-bold">Introduction to Web Development</h3>
+              <p className="text-gray-600">
+                A brief description of your project and the technologies used.
+              </p>
+              <a
+                href="/courses/introduction-to-web-development"
+                className="inline-block text-blue-600 hover:text-blue-800"
+              >
+                View Course →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-gray-50">
+        <div className="container max-w-4xl mx-auto py-16">
+          <h2 className="text-4xl font-bold mb-8">Get in Touch</h2>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <p className="text-gray-600 mb-8">
+                Interested in working together? I&apos;d love to hear from you.
+              </p>
+              <div className="space-y-4">
+                <a
+                  href="mailto:ambatikirankumar4@gmail.com"
+                  className="flex items-center gap-2 text-lg hover:text-blue-600 transition"
+                >
+                  <FaEnvelope className="text-xl" /> Email me →
+                </a>
+                <a
+                  href="https://github.com/KirankumarAmbati"
+                  className="flex items-center gap-2 text-lg hover:text-blue-600 transition"
+                >
+                  <FaGithub className="text-xl" /> GitHub →
+                </a>
+                <a
+                  href="https://linkedin.com/in/ambatikirankumar"
+                  className="flex items-center gap-2 text-lg hover:text-blue-600 transition"
+                >
+                  <FaLinkedin className="text-xl" /> LinkedIn →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
